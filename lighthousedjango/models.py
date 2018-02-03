@@ -6,3 +6,5 @@ class Event(models.Model):
     end = models.DateTimeField()
     title = models.CharField(500)
     description = models.CharField(1000)
+
+    
