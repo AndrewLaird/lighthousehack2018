@@ -1,8 +1,8 @@
 from django.contrib import admin
 
-from lighthousedjango.models import Event#,Calendar,User
+from lighthousedjango.models import Event,User#,Calendar,User
 
 
 admin.site.register(Event)
 #admin.site.register(Calendar)
-#admin.site.register(User)
+admin.site.register(User)
