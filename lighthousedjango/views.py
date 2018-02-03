@@ -9,4 +9,5 @@ def cool_shit(request):
 	result_str = ""
 	for event in models.Event.objects.all():
 		result_str += "started: " + str(event.start) + " ended: " + str(event.end) + " and it was called " + str(event.title) +"\n"
+		result_str = result_str.replace('\n', '< br/>')
 	return HttpResponse(result_str)
