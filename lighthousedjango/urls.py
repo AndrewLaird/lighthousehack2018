@@ -16,10 +16,10 @@ Including another URLconf
 
 
 from django.contrib import admin
-from django.urls import path
+from django.conf.urls import url
 from lighthousedjango import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('success',views.success),
-    path('cool_shit',views.cool_shit),
+    url(r'^admin/', admin.site.urls),
+    url(r'^success',views.success),
+    url(r'^cool_shit',views.cool_shit),
 ]
