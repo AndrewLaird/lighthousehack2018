@@ -21,4 +21,5 @@ from lighthousedjango import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('success',views.success),
+    path('cool_shit',views.cool_shit),
 ]
