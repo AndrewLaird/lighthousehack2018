@@ -1,9 +1,7 @@
 from django.db import models
-from django.contrib.postgres.fields import JSONField
-
 
 class Settings(models.Model):
-     black_list = JSONField()
+     black_list = models.CharField(max_length=1000)
 
 class User(models.Model):
     first  = models.CharField(max_length=75)
