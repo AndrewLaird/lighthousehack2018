@@ -1,5 +1,5 @@
 from django.http import HttpResponse, JsonResponse
-from ..lighthousedjango import models
+#from ..lighthousedjango import models
 
 
 def success(request):
