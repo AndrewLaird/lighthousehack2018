@@ -1,14 +1,10 @@
 from django.db import models
 
-class Settings(models.Model):
-     black_list = models.CharField(max_length=1000)
-
 class User(models.Model):
     first  = models.CharField(max_length=75)
     last = models.CharField(max_length=75)
     #hashed with sha1 and hash lib
     hashed_password = models.CharField(max_length=500)
-    settings = models.ForeignKey('Settings',on_delete=models.PROTECT)
 
 class Calendar(models.Model):
     name =models.CharField(max_length=500)
