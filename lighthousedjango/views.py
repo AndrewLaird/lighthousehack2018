@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from lighthousedjango import models
+from django.views.decorators.csrf import csrf_exempt
 import json
 
 def success(request):
@@ -21,6 +22,7 @@ def log_activity(request):
 		day = request.POST["start_day"]
 		duration = request.POST["duration"]
 
+@csrf_exempt
 def sign_in(request):
 	if(request.method == "POST"):
 		username =request.POST["username"]
