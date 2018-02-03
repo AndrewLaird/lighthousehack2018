@@ -8,5 +8,5 @@ def success(request):
 def cool_shit(request):
 	result_str = ""
 	for event in models.Event.objects.all():
-		result_str += "started: " + event.start + " ended: " + event.end + " and it was called " + event.title +"\n"
+		result_str += "started: " + str(event.start) + " ended: " + str(event.end) + " and it was called " + str(event.title) +"\n"
 	return HttpResponse(result_str)
