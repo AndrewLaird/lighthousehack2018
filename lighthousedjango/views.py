@@ -1,4 +1,5 @@
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse
+
 
 def success(request):
 	return HttpResponse("that good succcc")
