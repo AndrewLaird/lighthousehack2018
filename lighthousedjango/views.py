@@ -27,7 +27,7 @@ def sign_in(request):
 	if(request.method == "POST"):
 		username =request.POST["username"]
 		password = request.POST["password"]
-		user = models.User.objects.fiter(username=username,password=password)
+		user = models.User.objects.filter(username=username,password=password)
 		if(user == None):
 			return HttpResponse(-1)
 		else:
