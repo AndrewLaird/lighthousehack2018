@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^success',views.success),
     url(r'^cool_shit',views.cool_shit),
+    url(r'^log_activity',views.log_activity),
 ]

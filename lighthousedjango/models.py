@@ -1,8 +1,7 @@
 from django.db import models
 #
 class User(models.Model):
-    first  = models.CharField(max_length=75)
-    last = models.CharField(max_length=75)
+    username = models.CharField(max_length=100)
     #hashed with sha1 and hash lib
     hashed_password = models.CharField(max_length=500)
     blocked_websites = models.CharField(max_length=1000)
