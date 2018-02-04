@@ -31,4 +31,4 @@ def sign_in(request):
 		if(user == None):
 			return HttpResponse(-1)
 		else:
-			return HttpResponse(user.pk)
+			return HttpResponse(user.last().pk)
