@@ -31,16 +31,16 @@ def sign_in(request):
 		try:
 			user = models.User.objects.get(username=username,hashed_password=password)
 		except:
-			return HttpResponse(str(-1), 200,content_type='text/plain')
-		return HttpResponse(str(user.pk), 200,content_type='text/plain')
+			return HttpResponse(str(-1), 200)
+		return HttpResponse(str(user.pk), 200)
 	elif(request.method == "GET"):
 		username = request.GET["username"]
 		password = request.GET["password"]
 		try:
 			user = models.User.objects.get(username=username, hashed_password=password)
 		except:
-			return HttpResponse(str(-1), 200, content_type='text/plain')
-		return HttpResponse(str(user.pk), 200, content_type='text/plain')
+			return HttpResponse(str(-1), 200)
+		return HttpResponse(str(user.pk), 200)
 	return HttpResponse("hello")
 
 
