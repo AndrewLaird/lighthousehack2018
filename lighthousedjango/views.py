@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from lighthousedjango.models import Event,User
 #from lighthousedjango.serializers import UserSerializer
 from django.views.decorators.csrf import csrf_exempt
+import json
 
 def success(request):
 	return HttpResponse("that good succcc")
@@ -14,13 +15,17 @@ def cool_shit(request):
 
 
 def log_activity(request):
-	if(request.method == "POST"):
-		user = request.POST["user"]
-		website = request.POST["website"]
-		year =request.POST["start_year"]
-		month =request.POST["start_month"]
-		day = request.POST["start_day"]
-		duration = request.POST["duration"]
+	if(request.method == "GET"):
+		user = request.GET["user"]
+		website = request.GET["website"]
+		year =request.GET["start_year"]
+		month =request.GET["start_month"]
+		day = request.GET["start_day"]
+		duration = request.GET["duration"]
+		user_object = User.objects.get(pk=user)
+		user_json = json.dumps(user_object.totals)
+		return HttpResponse(user_json)
+
 
 @csrf_exempt
 def sign_in(request):
@@ -94,3 +99,4 @@ def sign_up(request):
 		return HttpResponse("Model created sucessfully", 200)
 		# else:
 		# 	return HttpResponse("Could not create model", 400)
+
