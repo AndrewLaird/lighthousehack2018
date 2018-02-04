@@ -5,7 +5,7 @@ class User(models.Model):
     #hashed with sha1 and hash lib
     hashed_password = models.CharField(max_length=500)
     blocked_websites = models.CharField(max_length=1000)
-    totals = models.CharField(max_length=1000)
+    totals = models.CharField(max_length=10000)
 
 class Calendar(models.Model):
      name =models.CharField(max_length=500)
