@@ -28,11 +28,11 @@ def sign_in(request):
 	if(request.method == "POST"):
 		username =request.POST["username"]
 		password = request.POST["password"]
-		user = models.User.objects.get(username=username,hashed_password=password)
-		if(user == None):
+		try:
+			user = models.User.objects.get(username=username,hashed_password=password)
+		except:
 			return HttpResponse(-1)
-		else:
-			return HttpResponse(user.last().pk)
+		return HttpResponse(user.last().pk)
 
 @csrf_exempt
 def sign_up(request):
