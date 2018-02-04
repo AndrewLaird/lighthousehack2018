@@ -4,7 +4,7 @@ from lighthousedjango.models import Event, User
 class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
-        fields = ('start', 'end', 'title', 'description', 'calendar_id')
+        fields = ('start', 'end', 'title', 'description', 'calendar')
 
 class CalendarSerializer(serializers.ModelSerializer):
     class Meta:
