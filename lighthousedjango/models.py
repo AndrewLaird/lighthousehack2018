@@ -6,9 +6,10 @@ class User(models.Model):
     hashed_password = models.CharField(max_length=500)
     blocked_websites = models.CharField(max_length=1000)
     totals = models.CharField(max_length=1000)
-# class Calendar(models.Model):
-#     name =models.CharField(max_length=500)
-#     user = models.ForeignKey('User',on_delete=models.PROTECT)
+
+class Calendar(models.Model):
+     name =models.CharField(max_length=500)
+     user = models.ForeignKey('User',on_delete=models.PROTECT)
 
 
 class Event(models.Model):
