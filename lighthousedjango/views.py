@@ -32,7 +32,7 @@ def log_activity(request):
 			user_json[year][month][day] = {}
 		if(website not in user_json[year][month][day]):
 			user_json[year][month][day][website] = 0
-		user_json[year][month][day][website] += duration
+		user_json[year][month][day][website] += str(duration)
 
 		return HttpResponse(user_json)
 
