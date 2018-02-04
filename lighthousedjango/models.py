@@ -17,6 +17,6 @@ class Event(models.Model):
     end = models.DateTimeField()
     title = models.CharField(max_length=500)
     description = models.CharField(max_length=1000)
-    #calendar = models.ForeignKey('Calendar',on_delete=models.PROTECT)
+    calendar = models.ForeignKey('Calendar',on_delete=models.PROTECT)
 
 
