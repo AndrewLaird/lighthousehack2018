@@ -65,11 +65,11 @@ def sign_up(request):
 			"totals":json_totals,
 		}
 		new_user = User(username=username,hashed_password=password,blocked_websites=json_black_list,totals=json_totals)
-		if (new_user.is_valid()):
-			new_user.save()
-			return HttpResponse("Model created sucessfully", 200)
-		else:
-			return HttpResponse("Could not create model",400)
+		# if (new_user.is_valid()):
+		# 	new_user.save()
+		# 	return HttpResponse("Model created sucessfully", 200)
+		# else:
+		# 	return HttpResponse("Could not create model",400)
 	if (request.method == "GET"):
 		username = request.GET["username"]
 		password = request.GET["password"]
@@ -90,8 +90,7 @@ def sign_up(request):
 			"totals": json_totals,
 		}
 		new_user = User(username=username,hashed_password=password,blocked_websites=json_black_list,totals=json_totals)
-		if (new_user.is_valid()):
-			new_user.save()
-			return HttpResponse("Model created sucessfully", 200)
-		else:
-			return HttpResponse("Could not create model", 400)
+		new_user.save()
+		return HttpResponse("Model created sucessfully", 200)
+		# else:
+		# 	return HttpResponse("Could not create model", 400)
