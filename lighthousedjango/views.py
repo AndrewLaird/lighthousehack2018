@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from lighthousedjango import models
-from lighthousedjango import serializers
+from lighthousedjango.serializers import UserSerializer
 from django.views.decorators.csrf import csrf_exempt
 import json
 
@@ -65,7 +65,7 @@ def sign_up(request):
 			"blocked_websites":json_black_list,
 			"totals":json_totals,
 		}
-		new_user = serializers.UserSerializer(data=data)
+		new_user = UserSerializer(data=data)
 		new_user.run_validation(data=data)
 		if (new_user.is_valid()):
 			new_user.save()
@@ -91,7 +91,7 @@ def sign_up(request):
 			"blocked_websites": json_black_list,
 			"totals": json_totals,
 		}
-		new_user = serializers.UserSerializer(data=data)
+		new_user = UserSerializer(data=data)
 		new_user.run_validation(data=data)
 		if (new_user.is_valid()):
 			new_user.save()
