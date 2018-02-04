@@ -23,7 +23,17 @@ def log_activity(request):
 		day = request.GET["start_day"]
 		duration = request.GET["duration"]
 		user_object = User.objects.get(pk=user)
-		user_json = json.dumps(user_object.totals)
+		user_json = json.loads(user_object.totals)
+		if(year not in user_json.keys()):
+			user_json[year] = {}
+		if(month not in user_json[year].keys()):
+			user_json[year][month] = {}
+		if(day not in user_json[year][month].keys()):
+			user_json[year][month][day] = {}
+		if(website not in user_json[year][month][day]):
+			user_json[year][month][day][website] = 0
+		user_json[year][month][day][website] += duration
+
 		return HttpResponse(user_json)
 
 
