@@ -33,7 +33,7 @@ def log_activity(request):
 		if(website not in user_json[year][month][day]):
 			user_json[year][month][day][website] = 0
 		user_json[year][month][day][website] += int(duration)
-		user_object.totals = json.loads(user_json)
+		user_object.totals = str(user_json)
 		return HttpResponse(200)
 
 
