@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from lighthousedjango.models import Event,User
+from lighthousedjango.models import User
 #from lighthousedjango.serializers import UserSerializer
 from django.views.decorators.csrf import csrf_exempt
 import json
