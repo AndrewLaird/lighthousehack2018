@@ -33,6 +33,7 @@ def sign_in(request):
 		except:
 			return HttpResponse(-1)
 		return HttpResponse(user.pk)
+	return HttpResponse("hello")
 
 @csrf_exempt
 def sign_up(request):
