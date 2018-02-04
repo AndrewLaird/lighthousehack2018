@@ -32,7 +32,7 @@ def sign_in(request):
 			user = models.User.objects.get(username=username,hashed_password=password)
 		except:
 			return HttpResponse(-1)
-		return HttpResponse(user.last().pk)
+		return HttpResponse(user.pk)
 
 @csrf_exempt
 def sign_up(request):
