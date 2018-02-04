@@ -13,16 +13,10 @@ python_version = "3.6"
 [packages]
 
 dj-database-url = "==0.4.2"
-django = "==1.9"
+django = "==2.0"
 gunicorn = "==19.7.1"
 "psycopg2" = "==2.7.3.2"
 whitenoise = "*"
-
-Markdown= "==2.6.9"
-
-django-filter= "==1.0.4"
-
-djangorestframework= "==3.7.0"
 
 [dev-packages]
 
