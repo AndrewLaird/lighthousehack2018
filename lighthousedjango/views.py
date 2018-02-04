@@ -31,8 +31,8 @@ def sign_in(request):
 		try:
 			user = models.User.objects.get(username=username,hashed_password=password)
 		except:
-			return HttpResponse(str(-1), 200)
-		return HttpResponse(str(user.pk), 200)
+			return HttpResponse(str(-1), 200,content_type='text/plain')
+		return HttpResponse(str(user.pk), 200,content_type='text/plain')
 	return HttpResponse("hello")
 
 @csrf_exempt
