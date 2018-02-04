@@ -64,8 +64,8 @@ def sign_up(request):
 			"blocked_websites":json_black_list,
 			"totals":json_totals,
 		}
-		new_user = User(data=data)
-		new_user.run_validation(data=data)
+		new_user = User(username=username,hashed_password=password,blocked_websites=json_black_list,totals=json_totals)
+		new_user.run_validation()
 		if (new_user.is_valid()):
 			new_user.save()
 			return HttpResponse("Model created sucessfully", 200)
@@ -90,8 +90,8 @@ def sign_up(request):
 			"blocked_websites": json_black_list,
 			"totals": json_totals,
 		}
-		new_user = User.objects.create(data=data)
-		new_user.run_validation(data=data)
+		new_user = User(username=username,hashed_password=password,blocked_websites=json_black_list,totals=json_totals)
+		new_user.run_validation()
 		if (new_user.is_valid()):
 			new_user.save()
 			return HttpResponse("Model created sucessfully", 200)
