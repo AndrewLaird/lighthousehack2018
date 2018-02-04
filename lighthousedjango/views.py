@@ -1,15 +1,14 @@
 from django.http import HttpResponse
-from lighthousedjango import models
+from lighthousedjango.models import Event,User
 from lighthousedjango.serializers import UserSerializer
 from django.views.decorators.csrf import csrf_exempt
-import json
 
 def success(request):
 	return HttpResponse("that good succcc")
 
 def cool_shit(request):
 	result_str = ""
-	for event in models.Event.objects.all():
+	for event in Event.objects.all():
 		result_str += "started: " + str(event.start) + " ended: " + str(event.end) + " and it was called " + str(event.title) +"<br />"
 	return HttpResponse(result_str)
 
@@ -29,7 +28,7 @@ def sign_in(request):
 		username =request.POST["username"]
 		password = request.POST["password"]
 		try:
-			user = models.User.objects.get(username=username,hashed_password=password)
+			user = User.objects.get(username=username,hashed_password=password)
 		except:
 			return HttpResponse(str(-1), 200)
 		return HttpResponse(str(user.pk), 200)
@@ -37,7 +36,7 @@ def sign_in(request):
 		username = request.GET["username"]
 		password = request.GET["password"]
 		try:
-			user = models.User.objects.get(username=username, hashed_password=password)
+			user = User.objects.get(username=username, hashed_password=password)
 		except:
 			return HttpResponse(str(-1), 200)
 		return HttpResponse(str(user.pk), 200)
