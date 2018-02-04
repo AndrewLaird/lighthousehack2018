@@ -24,5 +24,6 @@ urlpatterns = [
     url(r'^cool_shit',views.cool_shit),
     url(r'^log_activity',views.log_activity),
     url(r'^sign_in',views.sign_in),
-    url(r'^sign_up',views.sign_up)
+    url(r'^sign_up',views.sign_up),
+    url(r'^log_activity',views.log_activity),
 ]
