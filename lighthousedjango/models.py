@@ -9,7 +9,7 @@ class User(models.Model):
 
 class Calendar(models.Model):
      name =models.CharField(max_length=500)
-     user = models.ForeignKey('User',on_delete=models.PROTECT)
+     #user = models.ForeignKey('User',on_delete=models.PROTECT)
 
 
 class Event(models.Model):
@@ -17,6 +17,6 @@ class Event(models.Model):
     end = models.DateTimeField()
     title = models.CharField(max_length=500)
     description = models.CharField(max_length=1000)
-    calendar = models.ForeignKey('Calendar',on_delete=models.PROTECT)
+    #calendar = models.ForeignKey('Calendar',on_delete=models.PROTECT)
 
 
