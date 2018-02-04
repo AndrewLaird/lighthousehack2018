@@ -40,9 +40,6 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
 
-    #third party app
-    'rest_framework',
-
     'lighthousedjango',
 ]
 
