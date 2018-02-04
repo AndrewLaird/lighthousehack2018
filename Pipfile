@@ -17,7 +17,14 @@ django = "==2.0"
 gunicorn = "==19.7.1"
 "psycopg2" = "==2.7.3.2"
 whitenoise = "*"
-rest_framework ="*"
+
+Markdown==2.6.9
+
+Pillow==2.3.0
+
+django-filter==1.0.4
+
+djangorestframework==3.6.4
 
 [dev-packages]
 
