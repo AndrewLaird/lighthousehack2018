@@ -31,8 +31,8 @@ def sign_in(request):
 		try:
 			user = models.User.objects.get(username=username,hashed_password=password)
 		except:
-			return HttpResponse(-1)
-		return HttpResponse(user.pk)
+			return HttpResponse(str(-1))
+		return HttpResponse(str(user.pk))
 	return HttpResponse("hello")
 
 @csrf_exempt
@@ -60,6 +60,6 @@ def sign_up(request):
 		# new_user.run_validation(data=data)
 		# if (new_user.is_valid()):
 		# 	new_user.save()
-		# 	return HttpResponse("Model created sucessfully",200)
+		# 	return HttpResponse("Model created sucessfully", 200)
 		# else:
 		# 	return HttpResponse("Could not create model",400)
