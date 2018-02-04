@@ -47,12 +47,12 @@ def sign_up(request):
 			"youtube":15,
 			"instagram":40
 		}
-		json_black_list = json.loads(json.dumps(black_list))
+		json_black_list = str(black_list)
 		json_totals = "{}"
 		data = {
 			"username":username,
 			"hashed_password":password,
-			"black_list":json_black_list,
+			"blocked_websites":json_black_list,
 			"totals":json_totals,
 		}
 		new_user = serializers.UserSerializer(data=data)

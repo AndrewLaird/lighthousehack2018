@@ -10,5 +10,5 @@ class EventSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('username', 'hashed_password', 'black_list', 'totals')
+        fields = ('username', 'hashed_password', 'blocked_websites', 'totals')
 
