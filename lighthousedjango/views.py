@@ -23,7 +23,7 @@ def log_activity(request):
 		day = request.GET["start_day"]
 		duration = request.GET["duration"]
 		user_object = User.objects.get(pk=user)
-		user_json = json.dumps(user_object.totals)
+		user_json = json.loads(user_object.totals)
 		if(year not in user_json.keys()):
 			user_json[year] = {}
 		if(month not in user_json[year].keys()):
@@ -33,7 +33,7 @@ def log_activity(request):
 		if(website not in user_json[year][month][day]):
 			user_json[year][month][day][website] = 0
 		user_json[year][month][day][website] += int(duration)
-		return HttpResponse(user_json)
+		return HttpResponse(str(user_json))
 
 
 @csrf_exempt
