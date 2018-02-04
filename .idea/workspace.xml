@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a072414-bd01-4cb8-90b3-cba1edd7de73" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lighthousedjango/views.py" afterPath="$PROJECT_DIR$/lighthousedjango/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lighthousedjango/urls.py" afterPath="$PROJECT_DIR$/lighthousedjango/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lighthousedjango/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="330">
+              <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
               <folding>
                 <element signature="e#642#674#0" expanded="true" />
               </folding>
@@ -29,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lighthousedjango/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -126,10 +126,10 @@
         <option value="$PROJECT_DIR$/Pipfile" />
         <option value="$PROJECT_DIR$/lighthousedjango/serializers.py" />
         <option value="$PROJECT_DIR$/lighthousedjango/settings.py" />
-        <option value="$PROJECT_DIR$/lighthousedjango/urls.py" />
         <option value="$PROJECT_DIR$/lighthousedjango/models.py" />
         <option value="$PROJECT_DIR$/lighthousedjango/admin.py" />
         <option value="$PROJECT_DIR$/lighthousedjango/views.py" />
+        <option value="$PROJECT_DIR$/lighthousedjango/urls.py" />
       </list>
     </option>
   </component>
@@ -769,16 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lighthousedjango/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="e#642#674#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lighthousedjango/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -811,6 +801,16 @@
           <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lighthousedjango/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding>
+            <element signature="e#642#674#0" expanded="true" />
           </folding>
         </state>
       </provider>

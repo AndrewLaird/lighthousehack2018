@@ -21,7 +21,6 @@ from lighthousedjango import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^success',views.success),
-    url(r'^cool_shit',views.cool_shit),
     url(r'^log_activity',views.log_activity),
     url(r'^sign_in',views.sign_in),
     url(r'^sign_up',views.sign_up),
