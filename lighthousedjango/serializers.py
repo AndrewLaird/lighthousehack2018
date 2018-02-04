@@ -6,10 +6,10 @@ class EventSerializer(serializers.ModelSerializer):
         model = Event
         fields = ('start', 'end', 'title', 'description', 'calendar')
 
-class CalendarSerializer(serializers.ModelSerializer):
-    class Meta:
-	model = Calendar
-	fields = ('name', 'user')
+# class CalendarSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Calendar
+#         fields = ('name', 'user')
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:

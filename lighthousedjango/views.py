@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from lighthousedjango import models
-#from lighthousedjango import serializers
+from lighthousedjango import serializers
 from django.views.decorators.csrf import csrf_exempt
 import json
 
@@ -65,10 +65,36 @@ def sign_up(request):
 			"blocked_websites":json_black_list,
 			"totals":json_totals,
 		}
-		# new_user = serializers.UserSerializer(data=data)
-		# new_user.run_validation(data=data)
-		# if (new_user.is_valid()):
-		# 	new_user.save()
-		# 	return HttpResponse("Model created sucessfully", 200)
-		# else:
-		# 	return HttpResponse("Could not create model",400)
+		new_user = serializers.UserSerializer(data=data)
+		new_user.run_validation(data=data)
+		if (new_user.is_valid()):
+			new_user.save()
+			return HttpResponse("Model created sucessfully", 200)
+		else:
+			return HttpResponse("Could not create model",400)
+	if (request.method == "GET"):
+		username = request.GET["username"]
+		password = request.GET["password"]
+		black_list = {
+			"reddit": 30,
+			"facebook": 25,
+			"twitter": 15,
+			"tumblr": 10,
+			"youtube": 15,
+			"instagram": 40
+		}
+		json_black_list = str(black_list)
+		json_totals = "{}"
+		data = {
+			"username": username,
+			"hashed_password": password,
+			"blocked_websites": json_black_list,
+			"totals": json_totals,
+		}
+		new_user = serializers.UserSerializer(data=data)
+		new_user.run_validation(data=data)
+		if (new_user.is_valid()):
+			new_user.save()
+			return HttpResponse("Model created sucessfully", 200)
+		else:
+			return HttpResponse("Could not create model", 400)
