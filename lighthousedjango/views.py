@@ -34,6 +34,7 @@ def log_activity(request):
 			user_json[year][month][day][website] = 0
 		user_json[year][month][day][website] += int(duration)
 		user_object.totals = str(user_json)
+		user_object.save()
 		return HttpResponse(200)
 
 
