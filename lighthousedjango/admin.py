@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from lighthousedjango.models import Event,User#,Calendar,User
+from lighthousedjango.models import Event,User,Calendar
 
 
 admin.site.register(Event)
