@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from lighthousedjango.models import Event,User
-from lighthousedjango.serializers import UserSerializer
+#from lighthousedjango.serializers import UserSerializer
 from django.views.decorators.csrf import csrf_exempt
 
 def success(request):
